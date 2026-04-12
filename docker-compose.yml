@@ -16,7 +16,7 @@ services:
 
   api:
     build:
-      context: .
+      context: ./backend
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
@@ -35,7 +35,7 @@ services:
     environment:
       PGPASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - ./seeds/seed.sql:/seed.sql:ro
+      - ./backend/seeds/seed.sql:/seed.sql:ro
     entrypoint: >
       sh -c "psql -h postgres -U ${POSTGRES_USER} -d ${POSTGRES_DB} -f /seed.sql"
     depends_on:
