@@ -422,4 +422,4 @@ In that project I also engineerd a custom rate limtter for each user in front of
 
 ### Message Broker
 
-I also designed by very own message broker from scratch in that project, in this I would have used it in the task completion notification system. If an assignee completed a task an automated worker will push an mail to the project owner's email notifying them that, this particular task has been completed.
+I also designed my very own message broker from scratch in that project, in this project I would have used it in the task completion notification system. If an assignee completed a task, an automated worker will push a mail to the project owner's email notifying them that, this particular task has been completed.
